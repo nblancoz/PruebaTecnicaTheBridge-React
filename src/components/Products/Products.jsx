@@ -42,10 +42,6 @@ const columns = [
   },
 ];
 
-const onChange = (pagination, filters, sorter, extra) => {
-  console.log("params", pagination, filters, sorter, extra);
-};
-
 const Products = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
@@ -61,7 +57,7 @@ const Products = () => {
     price: product.price,
   }));
 
-  return <Table columns={columns} dataSource={data} onChange={onChange} />;
+  return <Table columns={columns} dataSource={data} />;
 };
 
 export default Products;
